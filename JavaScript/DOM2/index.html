@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM2</title>
+</head>
+
+<body>
+    <h1 id="encabezado">Prueba de JQuery y JavaScript</h1>
+    <p id="parrafo">Parrafo de prueba de boton que lo elimina al hacer click en el</p>
+    <div id="lista">
+        <h2>Lista JavaScript</h2>
+    </div>
+    <button id="boton">Borrador</button>
+
+    <script>
+        //Lista generada dinamicamente.
+        let lista = document.createElement("ul");
+
+        let li1 = document.createElement("li");
+        li1.textContent = "Linea1";
+        lista.appendChild(li1);
+
+        let li2 = document.createElement("li");
+        li2.textContent = "Linea1";
+        lista.appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.textContent = "Linea3";
+        lista.appendChild(li3);
+
+        let contenedor = document.getElementById("lista");
+        contenedor.appendChild(lista);
+
+        //Cambiar estilo con javaScript.
+        let estilo = document.getElementById("encabezado");
+        estilo.style.cssText = "color: green; font-size: 69px;";
+
+        //Boton que elimina parrafo
+        let boton = document.getElementById("boton");
+        let parrafo = document.getElementById("parrafo");
+
+        boton.addEventListener("click", function () {
+            parrafo.remove();
+        });
+
+    </script>
+</body>
+
+</html>
